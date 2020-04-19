@@ -4,7 +4,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-import MatchList from './components/MatchList';
+import ArchivedMatches from './components/ArchivedMatches';
+import LiveMatches from './components/LiveMatches';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,9 @@ function App() {
     <Container maxWidth="sm" className={classes.root}>
       <CssBaseline />
       <Box>
-        <MatchList />
+        <LiveMatches />
+        <hr />
+        <ArchivedMatches />
       </Box>
     </Container>
   );
