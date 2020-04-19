@@ -23,7 +23,7 @@ export const GET_ARCHIVED_MATCHES = gql`
 `;
 
 export const GET_LIVE_MATCHES = gql`
-  query LiveMatches {
+  subscription LiveMatches {
     matches(
       where: { finished: { _eq: false } }
       order_by: { started_at: desc }
