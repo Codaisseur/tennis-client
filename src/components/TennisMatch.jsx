@@ -52,9 +52,6 @@ const TennisMatch = ({ match }) => {
           <Grid item style={{ display: 'flex' }}>
             <Grid
               container
-              direction="column"
-              justify="center"
-              alignItems="stretch"
             >
               <Grid item>
                 <Typography
@@ -65,6 +62,10 @@ const TennisMatch = ({ match }) => {
                   <Moment tz="Europe/Amsterdam" fromNow>
                     {match.started_at}
                   </Moment>
+                </Typography>
+                <br />
+                <Typography className={classes.time}>
+                  <small>id: {match.id}</small>
                 </Typography>
               </Grid>
             </Grid>
